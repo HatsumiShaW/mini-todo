@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  transition: background 0.3s;
+}
+
+:root {
+  --bg: #f1f3f7;
+  --card: white;
+  --text: #222;
+  --task-bg: #f7f9fc;
+}
+
+body.dark {
+  --bg: #1d1f26;
+  --card: #2c2f36;
+  --text: #e7e7e7;
+  --task-bg: #3a3d45;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+
+h1 {
+  color: var(--text);
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-btn img {
+  width: 28px;
+}
+
+/* Input */
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 8px;
+  font-size: 15px;
+  background: var(--card);
+  color: var(--text);
+}
+
+button {
+  padding: 10px 18px;
+  background: #4a6cf7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3c57cf;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  flex: 1;
+  margin: 0 5px;
+  background: #d9dffb;
+  color: #000;
+}
+
+.filters .active {
+  background: #4a6cf7;
+  color: white;
+}
+
+/* List */
+#taskList {
+  list-style: none;
+}
+
+.task {
+  background: var(--task-bg);
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-icons {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-btn img {
+  width: 22px;
+}

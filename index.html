@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini To-Do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="top-bar">
+      <h1>📝 Mini To-Do</h1>
+      <button id="themeToggle" class="theme-btn">
+        <img id="themeIcon" src="assets/icons/moon.svg" alt="mode">
+      </button>
+    </div>
+
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Yeni görev ekle...">
+      <button id="addBtn">Ekle</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">Hepsi</button>
+      <button class="filter" data-filter="active">Aktif</button>
+      <button class="filter" data-filter="completed">Tamamlanan</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
